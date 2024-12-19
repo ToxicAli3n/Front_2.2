@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap')
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+  font-family: Comfortaa, sans-serif
+  background-color: #0d0d0d
+  color: white
+  overflow: hidden
+
+header
+  background-color: #1a1a1a
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px 20px
+  position: sticky
+  top: 0
+  z-index: 1000
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+
+  .logo
+    width: 120px
+
+  .search
+    flex-grow: 1
+    margin-left: 20px
+    display: flex
+    align-items: center
+
+  .search input
+    width: 100%
+    padding: 8px
+    border: none
+    border-radius: 20px
+    margin-right: 8px
+    background-color: #2a2a2a
+    color: white
+
+  .search-btn
+    background-color: #ba181b
+    border: none
+    padding: 6px 10px
+    border-radius: 20px
+    color: white
+    cursor: pointer
+    transition: background-color 0.3s
+
+  .search-btn:hover
+    background-color: #961415
+
+.sections-bar
+  background-color: #1a1a1a
+  font-family: Tektur, sans-serif
+  display: flex
+  justify-content: space-around
+  padding: 10px 0
+  position: sticky
+  top: 50px
+  z-index: 999
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+
+  div
+    color: white
+    cursor: pointer
+    padding: 10px 20px
+    border-radius: 5px
+    transition: background-color 0.3s, transform 0.3s
+
+  div:hover
+    background-color: #ba181b
+    transform: translateY(-3px)
+
+.container
+  display: flex
+  height: calc(100vh - 100px)
+  overflow: hidden
+
+.categories, .trends
+  background-color: #1a1a1a
+  font-family: Tektur, sans-serif
+  padding: 10px
+  overflow-y: auto
+  position: sticky
+  top: 100px
+  height: calc(100vh - 100px)
+  flex: 0 0 200px
+  border: 1px solid #961415
+  scrollbar-width: thin
+  scrollbar-color: #ba181b #0d0d0d
+
+  &::-webkit-scrollbar
+    width: 8px
+
+  &::-webkit-scrollbar-track
+    background: #0d0d0d
+
+  &::-webkit-scrollbar-thumb
+    background-color: #ba181b
+    border-radius: 10px
+
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+  li
+    padding: 10px
+    cursor: pointer
+    border-radius: 5px
+    transition: background-color 0.3s, transform 0.3s
+
+  li:hover
+    background-color: #ba181b
+    transform: translateX(5px)
+
+.main-content
+  flex: 1
+  background-color: #0d0d0d
+  color: white
+  padding: 50px
+  overflow-y: auto
+
+  img
+    width: 100%
+    max-width: 1350px
+    height: 600px
+    object-fit: cover
+    margin-bottom: 40px
+    border-radius: 10px
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5)
+    transition: transform 0.3s
+
+  img:hover
+    transform: scale(1.05)
+
+  p
+    line-height: 2
+    font-size: 1.5rem
+    margin-bottom: 40px
+
+  &::-webkit-scrollbar
+    width: 8px
+
+  &::-webkit-scrollbar-track
+    background: #0d0d0d
+
+  &::-webkit-scrollbar-thumb
+    background-color: #ba181b
+    border-radius: 10px
+
+@media (max-width: 768px)
+  header .logo
+    width: 80px
+
+  header .search
+    flex-grow: 0
+    margin-left: 10px
+
+  .sections-bar
+    display: none
+
+  .categories, .trends
+    display: none
+
+  .main-content
+    padding: 10px
+
+  .main-content p
+    font-size: 0.9rem
