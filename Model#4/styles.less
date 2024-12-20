@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+@primary-color: #ba181b;
+@background-color: #0b090a;
+@text-color: #ffffff;
+@secondary-bg-color: #161a1d;
+@hover-color: @primary-color;
+@font-base: 'Comfortaa', sans-serif;
+@font-special: 'Tektur', cursive;
+
+.card-style(@bg-color, @width, @padding) {
+  background-color: @bg-color;
+  border-radius: 8px;
+  padding: @padding;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: @width;
+}
+
+.button-style(@margin-top) {
+  margin-top: @margin-top;
+}
+
+.heading-style(@font-size, @color) {
+  font-family: @font-special;
+  font-size: @font-size;
+  margin-bottom: 10px;
+  color: @color;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: @font-base;
+  background-color: @background-color;
+  color: @text-color;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo img {
+  width: 250px;
+  height: auto;
+  margin: 25px auto 15px auto;
+  display: block;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.content {
+  width: 70%;
+}
+
+.article {
+  .card-style(@secondary-bg-color, 100%, 15px);
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.article img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.article .images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 30%;
+}
+
+.article .images img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.article .details {
+  width: 70%;
+  padding-left: 15px;
+}
+
+.article .details h2 {
+  .heading-style(1.8rem, @text-color);
+}
+
+.article .details p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.sidebar {
+  .card-style(@secondary-bg-color, 30%, 15px);
+  padding: 15px;
+}
+
+.sidebar h3 {
+  .heading-style(1.5rem, @primary-color);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li h4 {
+  .heading-style(1.1rem, @text-color);
+}
+
+.sidebar ul li p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #cccccc;
+}
+
+.sidebar ul li a {
+  color: @text-color;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: @hover-color;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .article {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .article .details {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .sidebar {
+    margin: 20px 0 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .article {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .article .details {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .sidebar {
+    margin: 20px 0 20px 0;
+  }
+
+  .sidebar h3 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul li h4 {
+    font-size: 1rem;
+  }
+
+  .sidebar ul li p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .article {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .article .details {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .sidebar {
+    margin: 20px 0 20px 0;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar ul li h4 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar ul li p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
