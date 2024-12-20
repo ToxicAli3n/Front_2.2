@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b090a;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.logo {
+  cursor: pointer;
+  height: 15vh;
+  width: 15vw;
+}
+
+.btn {
+  font-family: 'Tektur', cursive;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ba181b;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #ba181b;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #ba181b;
+    border: 2px solid #ba181b;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: #a4161a;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+}
+
+.intro-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.content-1 {
+  float: left;
+  padding: 10px 0 10px 0;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: 'Tektur', sans-serif;
+  color: #ffffff;
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.subtitle-1 {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.car {
+  float: right;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 15px;
+  height: auto;
+  object-fit: cover;
+}
+
+.video-section {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-2 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.blocks-1 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.block-1 {
+  background: #ba181b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin: 10px;
+  text-align: justify;
+}
+
+.block-1 h3 {
+  font-family: 'Tektur', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.block-1 p {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 5px 5px 5px 5px;
+}
+
+.how-to-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.section-title {
+  font-family: 'Tektur', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ba181b;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto auto 25px auto;
+}
+
+.steps-grid > .step:nth-child(4),
+.steps-grid > .step:nth-child(5) {
+  grid-column: span 1;
+  justify-self: center;
+}
+
+.step {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.step-number {
+  background-color: #ba181b;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.step-title {
+  font-family: 'Tektur', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.step-description {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555555;
+  text-align: justify;
+}
+
+.footer {
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links ul {
+  font-family: 'Comfortaa', sans-serif;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials .social-icon {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #ba181b;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #8b1315;
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    height: 10vh;
+    width: auto;
+  }
+
+  .intro-section {
+    width: 90%;
+  }
+
+  .content-1 {
+    width: 100%;
+  }
+
+  .car {
+    display: none;
+  }
+
+  .blocks-1 {
+    flex-direction: column;
+  }
+
+  .block-1 {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .how-to-section {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
