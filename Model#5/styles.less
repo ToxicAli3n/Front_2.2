@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+@primary-color: #ba181b;
+@secondary-color: #a4161a;
+@background-color: #0b090a;
+@text-color: #ffffff;
+@hover-color: #0b090a;
+@font-base: 'Comfortaa', sans-serif;
+@font-special: 'Tektur', cursive;
+@border-radius: 8px;
+@box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+@button-padding: 10px 20px;
+
+.button-style(@width, @bg-color, @color, @border-color) {
+  display: inline-block;
+  padding: @button-padding;
+  background-color: @bg-color;
+  color: @color;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid @border-color;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: @width;
+
+  &:hover {
+    background-color: #ffffff;
+    color: @border-color;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: @secondary-color;
+    color: @color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+}
+
+.card-style(@bg-color, @width, @padding) {
+  background-color: @bg-color;
+  padding: @padding;
+  border: 1px solid #ddd;
+  border-radius: @border-radius;
+  box-shadow: @box-shadow;
+  width: @width;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: @text-color;
+}
+
+.heading-style(@font-size, @color, @font-family) {
+  font-family: @font-family;
+  font-size: @font-size;
+  margin-bottom: 10px;
+  color: @color;
+}
+
+.content-text-style(@font-size, @color) {
+  font-family: @font-base;
+  font-size: @font-size;
+  color: @color;
+  line-height: 1.5;
+  text-align: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: @background-color;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.logo-section {
+  height: 35%;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slogan {
+  .heading-style(2rem, @text-color, @font-special);
+  font-weight: bold;
+}
+
+.content-section {
+  height: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.content-box {
+  .card-style(@background-color, 45%, 20px);
+}
+
+.content-box img {
+  width: 40%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.content-box h3 {
+  .heading-style(1.5rem, @text-color, @font-special);
+}
+
+.content-box p {
+  .content-text-style(0.9rem, #ddd);
+}
+
+.subscribe-section {
+  height: 35%;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.subscribe-input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 10px 10px 10px;
+  box-sizing: border-box;
+}
+
+.btn {
+  .button-style(60%, @primary-color, @text-color, @primary-color);
+  margin-top: 10px;
+}
+
+.footer-section {
+  height: 20%;
+  background-color: @primary-color;
+  color: @text-color;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1rem;
+}
+
+.footer-list li {
+  color: @text-color;
+  text-decoration: none;
+  font-family: @font-base;
+}
+
+.footer-list li a {
+  color: @text-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-list li a:hover {
+  color: @background-color;
+}
+
+.footer-list li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: @background-color;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.footer-list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 600px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .content-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .content-box img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-section {
+    width: 100%;
+    margin: 25px 25px;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .subscribe-input {
+    width: 80%;
+    margin: 25px 10px 10px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 1rem;
+    margin: 10px 10px 25px 10px;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-section {
+    justify-content: space-around;
+  }
+
+  .content-box {
+    width: 45%;
+  }
+
+  .subscribe-input {
+    width: 60%;
+    margin-right: 10px;
+  }
+
+  .btn {
+    width: auto;
+    padding: 12px 24px;
+  }
+}
